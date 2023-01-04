@@ -20,7 +20,7 @@ export class AppComponent implements OnInit  {
      (data)=>{console.log(data)}
    )
 
-    let buttonStream$ = fromEvent(document.querySelector('#btn1')! as HTMLButtonElement, 'click')
+    let buttonStream$ = fromEvent(document.getElementById('btn1') as HTMLButtonElement, 'click')
         .subscribe(event => console.log(event));
 
   }
