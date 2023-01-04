@@ -12,17 +12,21 @@ export class AppComponent implements OnInit  {
   constructor(){}
 
   ngOnInit() {
+    /* of */
    let source1 = of(1, 2, 3, 4, 5);
    let subscribe1 = source1.subscribe(val => console.log(val));
-
+   
+   /* from */
    let source2 =from([1,2,3,4,5,6,7]);
    let subscribe2=source2.subscribe(
      (data)=>{console.log(data)}
    )
 
+   /* fromEvent */
     fromEvent(document.getElementById('btn1') as HTMLButtonElement, 'click')
         .subscribe(event => console.log(event));
   
+   /* promise */
     let promise= new Promise((resolve,reject)=>{
       setTimeout(()=>{
         resolve("data0");
