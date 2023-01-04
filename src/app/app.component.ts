@@ -13,7 +13,7 @@ export class AppComponent  {
    source = of(1, 2, 3, 4, 5);
    subscribe = this.source.subscribe(val => console.log(val));
 
-   source2 =from([1,2,3,4,5]);
+   source2 =from([1,2,3,4,5,6,7]);
    subscribe2=this.source.subscribe(
      (data)=>{console.log}
    )
