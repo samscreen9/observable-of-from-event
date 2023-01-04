@@ -22,8 +22,21 @@ export class AppComponent implements OnInit  {
 
     let buttonStream$ = fromEvent(document.getElementById('btn1') as HTMLButtonElement, 'click')
         .subscribe(event => console.log(event));
+  
+    let promise= new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        resolve("data0");
+        resolve("data2");
+      },1000);
+    });
+    let po=from(promise);
+    po.subscribe(
+      (data)=>{console.log(data);}
+    )
 
   }
+
+  
    
 }
 
