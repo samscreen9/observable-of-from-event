@@ -76,13 +76,15 @@ export class AppComponent implements OnInit {
     let obs4 = of(11, 12, 13, 14);
     let s = new Subject<number>();
 
-    obs4.subscribe((data) => {
+    /*********without subject********** */
+    let o11=obs4.subscribe((data) => {
       console.log(data + ' ' + 'no subject 1');
     });
-    obs4.subscribe((data) => {
+    let o22=obs4.subscribe((data) => {
       console.log(data + ' ' + 'no subject 2');
     });
-    console.log('no subject method starts here');
+    /**************with subject****************** */
+    console.log('now subject method starts here');
 
     let s1 = s.subscribe((data) => {
       console.log(data + ' ' + 'with subject');
