@@ -71,6 +71,7 @@ export class AppComponent implements OnInit {
     obs3.subscribe((data) => {
       console.log(data + ' ' + 'obs3');
     });
+
     /* subject */
     let obs4 = of(11, 12, 13, 14);
     let s = new Subject<number>();
