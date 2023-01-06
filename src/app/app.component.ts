@@ -95,7 +95,7 @@ export class AppComponent implements OnInit {
     //s.next(1);s.next(2);
   }
 
-  /*utilty function */
+  /*utilty function to create child nodes for ul*/
   addtoList(item, appendto) {
     let li = document.createElement('li');
     li.textContent = item;
